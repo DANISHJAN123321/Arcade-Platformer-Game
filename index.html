@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red & White 2D Arcade Adventure</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>🔴 RedRunner 2D ⚪</h1>
+            <div class="score-board">
+                <span>Score: <strong id="scoreVal">0</strong></span>
+                <span>High Score: <strong id="highScoreVal">0</strong></span>
+            </div>
+        </header>
+
+        <div class="canvas-wrapper">
+            <canvas id="gameCanvas" width="800" height="400"></canvas>
+            <div id="startScreen" class="overlay">
+                <h2>Ready to Play?</h2>
+                <p>Use <strong>Arrow Keys / A & D</strong> to move, <strong>Space / W</strong> to jump.</p>
+                <button id="startBtn">Start Game</button>
+            </div>
+            <div id="gameOverScreen" class="overlay hidden">
+                <h2>Game Over!</h2>
+                <p>Your Final Score: <span id="finalScore">0</span></p>
+                <button id="restartBtn">Play Again</button>
+            </div>
+        </div>
+        
+        <div class="controls-hint">
+            <p>💡 Tip: Collect white circles to gain points, avoid red spikes & obstacles!</p>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
